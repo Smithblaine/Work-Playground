@@ -85,6 +85,7 @@ public class Main {
 
         if("yes".equals(stopping) || "no".equals(stopping))
         {
+            //Tricks you
             System.out.println("Are you absolutely sure you want to end the application, Type your response:  ");
             stopping = scnr.next();
         }
