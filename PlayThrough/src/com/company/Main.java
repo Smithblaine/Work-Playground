@@ -82,6 +82,12 @@ public class Main {
     {
         System.out.print("\nWould you like to continue? Type Yes or No  ");
         String stopping = scnr.next();
+
+        if("yes".equals(stopping) || "no".equals(stopping))
+        {
+            System.out.println("Are you absolutely sure you want to end the application, Type your response:  ");
+            stopping = scnr.next();
+        }
         return stopping;
     }
 }
