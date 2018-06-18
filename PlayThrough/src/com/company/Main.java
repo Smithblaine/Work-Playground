@@ -13,6 +13,7 @@ public class Main {
             String choice = Choice();
             double endNumber =Total(choice,numberOne,numberTwo);
             Results(endNumber);
+            ForLoopMethod(endNumber);
         }while(End().equalsIgnoreCase("yes"));
     }
 
@@ -76,6 +77,26 @@ public class Main {
     private static void Results(double total)
     {
         System.out.printf("\nYour total was: %.2f",total);
+    }
+
+    private static void ForLoopMethod(double total)
+    {
+        for(int i=0; i < 2; i++)
+        {
+            System.out.printf("\nYour total was: %.2f",total);
+        }
+
+        System.out.println("\nNested For Loop");
+
+        for(int i=0; i <= 3; i++)
+        {
+            System.out.printf("\nOuter for loop %d", i);
+
+            for(int r=0; r <= i; r++)
+            {
+                System.out.printf("\nInner for loop %d", r);
+            }
+        }
     }
 
     private static String End()
