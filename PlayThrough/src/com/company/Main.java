@@ -82,6 +82,7 @@ public class Main {
     private static void ForLoopMethod(double total)
     {
         //Testing a new merge feature
+        //Replaced comment
         for(int i=0; i < 2; i++)
         {
             System.out.printf("\nYour total was: %.2f",total);
