@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Greeting();
         do
@@ -15,6 +16,7 @@ public class Main {
             Results(endNumber);
             ForLoopMethod(endNumber);
         }while(End().equalsIgnoreCase("yes"));
+        GoodBye();
     }
 
     private static Scanner scnr = new Scanner(System.in);
@@ -99,6 +101,11 @@ public class Main {
                 System.out.printf("\nInner for loop %d", r);
             }
         }
+    }
+
+    private static void GoodBye()
+    {
+        System.out.println("Goodbye for now");
     }
 
     private static String End()
