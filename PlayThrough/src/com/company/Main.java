@@ -106,6 +106,7 @@ public class Main {
     private static void GoodBye()
     {
         System.out.println("Goodbye for now or is it the beginning?");
+        System.out.println("Goodbye for now or is it the beginning?");
     }
 
     private static String End()
