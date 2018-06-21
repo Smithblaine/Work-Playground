@@ -30,6 +30,7 @@ public class Main {
 
     private static double FirstNumber()
     {
+        System.out.print("\nEnter the First number:  ");
         double first = scnr.nextDouble();
         return first;
     }
