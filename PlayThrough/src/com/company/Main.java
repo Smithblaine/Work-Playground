@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
             double endNumber =Total(choice,numberOne,numberTwo);
             Results(endNumber);
             ForLoopMethod(endNumber);
+            RandomNumbers();
         }while(End().equalsIgnoreCase("yes"));
         GoodBye();
     }
@@ -28,7 +30,6 @@ public class Main {
 
     private static double FirstNumber()
     {
-        System.out.print("\n\nEnter the First number:  ");
         double first = scnr.nextDouble();
         return first;
     }
@@ -101,6 +102,15 @@ public class Main {
                 System.out.printf("\nInner for loop %d", r);
             }
         }
+    }
+
+    private static void RandomNumbers()
+    {
+        String val =" ";
+        Random ranInt = new Random();
+        int numbers = 100000 + (int)(ranInt.nextFloat() * 899900);
+        val += String.valueOf(numbers);
+        System.out.println(val);
     }
 
     private static void GoodBye()
