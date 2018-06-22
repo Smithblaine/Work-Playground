@@ -16,7 +16,7 @@ public class randomNumbers
 
     private static void LoopControl()
     {
-        System.out.print("Select how many times you want a new random number:  ");
+        System.out.println("Select how many times you want a new random number:  ");
         int control = scnr.nextInt();
 
         for(int i =1; i <= control; i++)
@@ -32,6 +32,6 @@ public class randomNumbers
         int numbers = 100000 + (int)(ranInt.nextFloat() * 899900);
         val += String.valueOf(numbers);
 
-        System.out.println("\n"+val);
+        System.out.println(val);
     }
 }
