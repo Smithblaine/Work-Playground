@@ -16,7 +16,6 @@ public class Main {
             double endNumber =Total(choice,numberOne,numberTwo);
             Results(endNumber);
             ForLoopMethod(endNumber);
-            RandomNumbers();
         }while(End().equalsIgnoreCase("yes"));
         GoodBye();
     }
@@ -48,7 +47,7 @@ public class Main {
         scnr.nextLine();
         String choice = scnr.next();
 
-        while(!"Multiplication".equals(choice) && !"Division".equals(choice) && !"Subtraction".equals(choice) && !"Addition".equals(choice))
+        while(!"Multiplication".equalsIgnoreCase(choice) && !"Division".equalsIgnoreCase(choice) && !"Subtraction".equalsIgnoreCase(choice) && !"Addition".equalsIgnoreCase(choice))
         {
             System.out.println("Opps, Appears that you may spelled something wrong, Try Again:  ");
             choice = scnr.next();
@@ -63,15 +62,19 @@ public class Main {
         switch(userChoice)
         {
             case "Multiplication":
+            case "multiplication":
                 total =numOne * numTwo;
                 break;
             case "Division":
+            case "division":
                 total =numOne / numTwo;
                 break;
             case "Subtraction":
+            case "subtraction":
                 total =numOne - numTwo;
                 break;
             case "Addition":
+            case "addition":
                 total =numOne + numTwo;
             break;
         }
@@ -105,14 +108,6 @@ public class Main {
         }
     }
 
-    private static void RandomNumbers()
-    {
-        String val =" ";
-        Random ranInt = new Random();
-        int numbers = 100000 + (int)(ranInt.nextFloat() * 899900);
-        val += String.valueOf(numbers);
-        System.out.println(val);
-    }
 
     private static void GoodBye()
     {
