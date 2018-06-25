@@ -18,7 +18,7 @@ public class randomNumbers
     {
         System.out.print("Select how many times you want a new random number:  ");
         int control = scnr.nextInt();
-
+        System.out.println();
         for(int i =1; i <= control; i++)
         {
             RandomGenny();
