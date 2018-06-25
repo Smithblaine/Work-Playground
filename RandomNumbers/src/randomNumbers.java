@@ -43,7 +43,7 @@ public class randomNumbers
         Random Beta = new Random();
         StringBuilder result = new StringBuilder();
 
-        for(int i = 0; i < Alpha.length(); i++)      //Adjusting i<(5) will lessen and increase your length of letters
+        for(int i = 0; i < Alpha.length(); i++)      //Adjusting i<(5) will lessen and increase your length of letters when not using the current input type
         {
             int RandAlphaBeta =Beta.nextInt(Alpha.length());
             result.append(Alpha.charAt(RandAlphaBeta));
