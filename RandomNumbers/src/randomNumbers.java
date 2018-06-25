@@ -5,7 +5,12 @@ public class randomNumbers
     public static void main(String[] args)
     {
         Greeting();
-        LoopControl();
+        do
+        {
+            String Alpha=Name();
+            RandomNumGenny();
+            RandomLetterGenny(Alpha);
+        }while(("yes").equalsIgnoreCase(RunAgain()));
     }
 
     public static Scanner scnr = new Scanner(System.in);
@@ -14,24 +19,17 @@ public class randomNumbers
         System.out.println("Generate 6 digit random numbers\nSelect a number of ho many time you want the app to run to see the different numbers.\n");
     }
 
-    private static void LoopControl()
+    private static String Name()
     {
-        System.out.print("Select how many times you want a new random number:  ");
-        int control = scnr.nextInt();
-        System.out.print("Enter your name:  ");
+        System.out.print("Enter your name with out spaces:  ");
         String Alpha = scnr.next();
         System.out.println();
-        for(int i =1; i <= control; i++)
-        {
-           RandomNumGenny();
-           RandomLetterGenny(Alpha);
-           System.out.println();
-        }
+        return Alpha;
     }
 
     private static void RandomNumGenny()
     {
-        String val =" ";
+        String val=" ";
         Random ranInt = new Random();
         int numbers = 100000 + (int)(ranInt.nextFloat() * 899900);
         val += String.valueOf(numbers);
@@ -45,11 +43,18 @@ public class randomNumbers
         Random Beta = new Random();
         StringBuilder result = new StringBuilder();
 
-        for(int i = 0; i < 5; i++)      //Adjusting i<(5) will lessen and increase your length of letters
+        for(int i = 0; i < Alpha.length(); i++)      //Adjusting i<(5) will lessen and increase your length of letters
         {
             int RandAlphaBeta =Beta.nextInt(Alpha.length());
             result.append(Alpha.charAt(RandAlphaBeta));
         }
         System.out.print(result);
+    }
+
+    private static String RunAgain()
+    {
+        System.out.println("\n\nWould you like the application to run again?  ");
+        String choice =scnr.next();
+        return choice;
     }
 }
