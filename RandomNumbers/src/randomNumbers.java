@@ -18,20 +18,38 @@ public class randomNumbers
     {
         System.out.print("Select how many times you want a new random number:  ");
         int control = scnr.nextInt();
+        System.out.print("Enter your name:  ");
+        String Alpha = scnr.next();
         System.out.println();
         for(int i =1; i <= control; i++)
         {
-            RandomGenny();
+           RandomNumGenny();
+           RandomLetterGenny(Alpha);
+           System.out.println();
         }
     }
 
-    private static void RandomGenny()
+    private static void RandomNumGenny()
     {
         String val =" ";
         Random ranInt = new Random();
         int numbers = 100000 + (int)(ranInt.nextFloat() * 899900);
         val += String.valueOf(numbers);
 
-        System.out.println("\t"+val);
+        System.out.print(val);
+    }
+
+    private static void RandomLetterGenny(String Alpha)
+    {
+//        String Alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Random Beta = new Random();
+        StringBuilder result = new StringBuilder();
+
+        for(int i = 0; i < 5; i++)      //Adjusting i<(5) will lessen and increase your length of letters
+        {
+            int RandAlphaBeta =Beta.nextInt(Alpha.length());
+            result.append(Alpha.charAt(RandAlphaBeta));
+        }
+        System.out.print(result);
     }
 }
