@@ -34,7 +34,14 @@ public class randomNumbers
         int numbers = 100000 + (int)(ranInt.nextFloat() * 899900);
         val += String.valueOf(numbers);
 
-        System.out.print(val);
+        System.out.println(val);
+
+        String descriptionAndTitle = " ";
+        Random ranNumber = new Random();
+        int digits = 100000 + (int) (ranNumber.nextFloat() * 899900);
+        descriptionAndTitle += String.valueOf(digits);
+
+        System.out.println(" -" + descriptionAndTitle);
     }
 
     private static void RandomLetterGenny(String Alpha)
@@ -50,13 +57,13 @@ public class randomNumbers
             int RandAlphaBeta =Beta.nextInt(Alpha.length());
             result.append(Alpha.charAt(RandAlphaBeta));
         }
-        System.out.print(result);
+        System.out.println(result);
     }
 
     private static String RunAgain()
     {
         System.out.println("\n\nWould you like the application to run again?  ");
-        String choice =scnr.next();
+        String choice=scnr.next();
         return choice;
     }
 }
