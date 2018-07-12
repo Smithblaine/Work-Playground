@@ -10,6 +10,8 @@ public class randomNumbers
             String Alpha=Name();
             RandomNumGenny();
             RandomLetterGenny(Alpha);
+            RandomLettersGenny();
+            RandomLettersWithNumbers();
         }while(("yes").equalsIgnoreCase(RunAgain()));
     }
 
@@ -60,6 +62,41 @@ public class randomNumbers
         System.out.println(result);
     }
 
+    private static void RandomLettersGenny()
+    {
+      String alphaBeta = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      Random Beta = new Random();
+      StringBuilder result = new StringBuilder();
+      //Adjusting i<(5) will lessen and increase your
+      // length of letters when not using the current input type
+      for(int i = 0; i < alphaBeta.length(); i++)
+      {
+        int RandAlphaBeta =Beta.nextInt(alphaBeta.length());
+        result.append(alphaBeta.charAt(RandAlphaBeta));
+      }
+      System.out.println(result);
+    }
+
+    private static void RandomLettersWithNumbers()
+    {
+      String descriptionAndTitle = " ";
+      Random ranNumber = new Random();
+      int digits = 100000 + (int) (ranNumber.nextFloat() * 899900);
+      descriptionAndTitle += String.valueOf(digits);
+
+      String alphaBeta = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      Random Beta = new Random();
+      StringBuilder result = new StringBuilder();
+
+      //Adjusting i<(5) will lessen and increase your
+      // length of letters when not using the current input type
+      for(int i = 0; i < alphaBeta.length(); i++)
+      {
+        int RandAlphaBeta =Beta.nextInt(alphaBeta.length());
+        result.append(alphaBeta.charAt(RandAlphaBeta));
+      }
+      System.out.println(result + " - " + descriptionAndTitle);
+    }
     private static String RunAgain()
     {
         System.out.println("\n\nWould you like the application to run again?  ");
